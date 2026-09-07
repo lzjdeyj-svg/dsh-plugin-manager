@@ -30,7 +30,7 @@ dsh web 用户。
 ## 安装（把本管理器装进一个 profile）
 
 ```sh
-dsh plugin --profile web add github:<owner>/dsh-plugin-manager#main
+dsh plugin --profile web add github:lzjdeyj-svg/dsh-plugin-manager#main
 # 或本仓库本地路径：
 #   cd <你的 profile 目录>
 #   pnpm add /绝对/路径/dsh-plugin-manager
