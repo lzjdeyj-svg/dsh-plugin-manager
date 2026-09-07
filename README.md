@@ -1,5 +1,7 @@
 # dsh-plugin-manager
+
 初始阶段使用DSH快速安装
+
 dsh plugin --profile web add github:lzjdeyj-svg/dsh-plugin-manager#main
 
 
