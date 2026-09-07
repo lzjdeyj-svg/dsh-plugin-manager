@@ -1,0 +1,8 @@
+# dsh-plugin-manager bundle patch：向 web 组合挂载一行宿主插件。
+# 宿主半注册自己的 settings 命名空间 `plugin-manager`（配置界面/客户端经官方
+# settings 通道读写），并监听“命令”执行 pnpm 安装/卸载/更新与 bundles 对账；
+# 浏览器半经 package.json 的 dsh.client 声明被 client 内核组合进页面，
+# 在「设置 → 插件」分区注册「插件管理」标签页。
+- insert:
+    - id: plugin-manager
+      name: dsh-plugin-manager

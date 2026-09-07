@@ -1,0 +1,40 @@
+{
+  "name": "dsh-plugin-manager",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH Web GUI 插件管理器：粘贴安装命令 / GitHub 链接 / README 占位说明即可安装 GitHub 上的 dsh 自制插件，并支持停用/启用/更新/卸载（bundle 插件格式，随附 dshpm CLI 引擎）。",
+  "main": "./.dsh-plugin/index.mjs",
+  "exports": {
+    ".": "./.dsh-plugin/index.mjs",
+    "./client": "./.dsh-plugin/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dshpm": "./bin/dshpm.mjs"
+  },
+  "files": [
+    ".dsh-plugin",
+    "lib",
+    "bin",
+    "cordis.patch.yml",
+    "README.zh.md",
+    "README.en.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "license": "MIT"
+}

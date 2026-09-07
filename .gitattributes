@@ -1,0 +1,5 @@
+# 统一所有文本文件的行尾为 LF。
+# - 本项目在 Linux/macOS（LF）上编写与运行；
+# - 声明 eol=lf 后，Windows 检出时也保持 LF，Git 不再做 CRLF 转换，
+#   消除“LF → CRLF”提示与跨平台无谓差异。
+* text eol=lf
